@@ -34,8 +34,7 @@ MixWrapperProcessor::MixWrapperProcessor()
       apvts (*this, nullptr, "PARAMS", createLayout()),
       scanner (formatManager)
 {
-    formatManager.addDefaultFormats();
-
+    juce::addDefaultFormatsToManager (formatManager);
     inParam      = apvts.getRawParameterValue ("in");
     mixParam     = apvts.getRawParameterValue ("mix");
     outParam     = apvts.getRawParameterValue ("out");
